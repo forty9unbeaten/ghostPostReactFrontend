@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:hover {
+    cursor: default;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+    height: 100vh;
+    width: 100vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    border-bottom: 1px solid lightgrey;
 }
 
-.App-link {
-  color: #61dafb;
+#headerContainer h1 {
+    margin: 0;
+    text-decoration: underline;
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 6px black;
+    font-family: 'Shadow Into Light', cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#headerContainer h3 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 6px black;
+    font-family: 'Shadow Into Light', cursive;
+}
+
+#contentContainer {
+    display: flex;
+    padding: 0 20px;
+    width: 100%;
+    height: 80%;
+}
+
+#postAndFilterContainer {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newPostContainer {
+    width: 90%;
+    height: 50%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newPostContainer textarea {
+    width: 100%;
+    height: 60%;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    padding: 5px;
+    border: 1px solid lightgrey;
+}
+
+#newPostContainer textarea:focus {
+    outline: none;
+}
+
+#inputLength {
+    width: 100%;
+    text-align: right;
+    margin-top: 3px;
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+
+#categoryDropdown {
+    margin-top: 10px;
+    width: 25%;
+    padding: 5px;
+    border-radius: 5px;
+    height: 15%;
+}
+
+#categoryDropdown:focus {
+    outline: none;
+}
+
+#postBtn {
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+}
+
+#postBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px black;
+}
+
+#filterContainer,
+#sortContainer {
+    margin: 10px auto;
+    height: 7%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.filterButton,
+.sortButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filterButton:hover,
+.sortButton:hover {
+    cursor: pointer;
+}
+
+.selected {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.filterLabel {
+    color: white;
+    text-shadow: 0 0 6px black;
+    font-size: 20px;
+}
+
+#postContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: scroll;
+    width: 70%;
+    height: 100%;
+}
+
+.post {
+    border: 1px solid lightgrey;
+    width: 85%;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    border-radius: 5px;
+}
+
+.postContent {
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.postCategory {
+    margin: 10px 0;
+    font-weight: bold;
+    width: fit-content;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.postCategory.boast {
+    text-shadow: 0 0 6px green;
+}
+
+.postCategory.roast {
+    text-shadow: 0 0 6px red;
+}
+
+.postDate {
+    padding: 5px 0;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 2px solid lightgrey;
+}
+
+.btn {
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px black;
 }
